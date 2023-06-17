@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/dimen_5dp"
+    android:layout_margin="@dimen/dimen_5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_200dp"
+        android:id="@+id/imageCover"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageCover"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCover"
+        />
+
+
+    <View
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_0dp"
+        android:id="@+id/gradientLayer"
+        android:background="@drawable/gradient_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageCover"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCover"
+        />
+
+
+    <TextView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        tools:text="2023-06-06 09:00:44"
+        android:textSize="@dimen/dimen_15sp"
+        android:layout_marginHorizontal="@dimen/dimen_20dp"
+        android:layout_marginVertical="@dimen/dimen_10dp"
+        android:textStyle="normal"
+        android:gravity="start"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCover"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

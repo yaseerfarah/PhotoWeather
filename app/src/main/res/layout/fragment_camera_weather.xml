@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".modules.cameraweather.presentation.view.CameraWeatherFragment">
+
+    <androidx.camera.view.PreviewView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_0dp"
+        android:id="@+id/camera_preview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_0dp"
+        android:id="@+id/camera_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+
+        <ImageView
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:id="@+id/preview_image"
+            android:visibility="gone"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <include layout="@layout/weather_content_layout"
+            android:id="@+id/weather_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="@dimen/dimen_60dp"
+        android:layout_height="@dimen/dimen_60dp"
+        android:visibility="gone"
+        android:backgroundTint="@color/colorPrimary"
+        app:icon="@drawable/ic_baseline_photo_camera_24"
+        android:id="@+id/capture_btn"
+        app:iconSize="@dimen/dimen_20dp"
+        app:iconTint="@color/white"
+        app:iconGravity="textStart"
+        android:layout_marginHorizontal="@dimen/dimen_10dp"
+        android:layout_marginVertical="@dimen/dimen_20dp"
+        android:padding="@dimen/dimen_0dp"
+        app:iconPadding="@dimen/dimen_0dp"
+        android:insetLeft="@dimen/dimen_0dp"
+        android:insetTop="@dimen/dimen_0dp"
+        android:insetRight="@dimen/dimen_0dp"
+        android:insetBottom="@dimen/dimen_0dp"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Thmanyah.Button.Circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_marginHorizontal="@dimen/dimen_10dp"
+        android:layout_marginVertical="@dimen/dimen_20dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:icon="@drawable/ic_back"
+        android:id="@+id/back_btn"
+        app:iconSize="@dimen/dimen_16dp"
+        app:iconTint="@color/white"
+        app:iconGravity="textStart"
+        android:layout_marginHorizontal="@dimen/dimen_10dp"
+        android:layout_marginVertical="@dimen/dimen_20dp"
+        android:padding="@dimen/dimen_0dp"
+        app:iconPadding="@dimen/dimen_0dp"
+        android:insetLeft="@dimen/dimen_0dp"
+        android:insetTop="@dimen/dimen_0dp"
+        android:insetRight="@dimen/dimen_0dp"
+        android:insetBottom="@dimen/dimen_0dp"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Thmanyah.Button.Circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+
+    <com.yasser.photoweather.base.presentation.view.customview.StateView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_0dp"
+        android:id="@+id/stateView"
+        android:elevation="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

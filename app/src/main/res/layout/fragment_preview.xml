@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".modules.preview.presentation.view.PreviewFragment">
+
+
+    <ImageView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_0dp"
+        android:id="@+id/preview_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:backgroundTint="@color/white"
+        app:icon="@drawable/ic_back"
+        android:id="@+id/back_btn"
+        app:iconSize="@dimen/dimen_16dp"
+        app:iconTint="@color/black"
+        app:iconGravity="textStart"
+        android:layout_marginHorizontal="@dimen/dimen_10dp"
+        android:layout_marginVertical="@dimen/dimen_20dp"
+        android:padding="@dimen/dimen_0dp"
+        app:iconPadding="@dimen/dimen_0dp"
+        android:insetLeft="@dimen/dimen_0dp"
+        android:insetTop="@dimen/dimen_0dp"
+        android:insetRight="@dimen/dimen_0dp"
+        android:insetBottom="@dimen/dimen_0dp"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Thmanyah.Button.Circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/share_btn"
+        app:cornerRadius="@dimen/dimen_5dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/share"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/dimen_15sp"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:textStyle="bold"
+        android:drawableTint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_share_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <com.yasser.photoweather.base.presentation.view.customview.StateView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_0dp"
+        android:id="@+id/stateView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

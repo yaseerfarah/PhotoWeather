@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/galleryFragment">
+
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.yasser.photoweather.modules.gallery.presentation.view.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_galleryFragment_to_previewFragment"
+            app:destination="@id/previewFragment" />
+        <action
+            android:id="@+id/action_galleryFragment_to_cameraWeatherFragment"
+            app:destination="@id/cameraWeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/previewFragment"
+        android:name="com.yasser.photoweather.modules.preview.presentation.view.PreviewFragment"
+        android:label="fragment_preview"
+        tools:layout="@layout/fragment_preview" />
+    <fragment
+        android:id="@+id/cameraWeatherFragment"
+        android:name="com.yasser.photoweather.modules.cameraweather.presentation.view.CameraWeatherFragment"
+        android:label="fragment_camera_weather"
+        tools:layout="@layout/fragment_camera_weather" >
+        <action
+            android:id="@+id/action_cameraWeatherFragment_to_previewFragment"
+            app:destination="@id/previewFragment"
+            app:popUpTo="@id/galleryFragment"
+            />
+    </fragment>
+</navigation>
